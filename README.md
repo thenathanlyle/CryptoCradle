@@ -80,53 +80,38 @@ This returns the data for all coins with the limit you set. In this example I ju
 ![alt text](https://github.com/thenathanlyle/project/blob/3106c6ffa5a2b38c8edc1e0de96182f28189ca45/CryptoCradleConcept.png "CryptoCradleConcept")
 
 ### MVP/PostMVP
-
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
-
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
-
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
-
+* Find API that can return data needed for coin details
+* Return top cryptocurrency coin data like icon image, name, symbol, rank, price
+* Allow users to search for specific coins and working nav bar
 #### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
-
-- Add second API
-- Use local storage to save user favorites
+* Allow for user to favorite specific coins in own tab
+* Light and Dark mode
+* Price color to change from green if price is higher and to red if price is lower
 
 ## Project Schedule
-
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
-
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
-
 |  Day | Deliverable | Status
 |---|---| ---|
-|July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|July 13| Project Approval | Incomplete
-|July 13| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|July 14| Pseudocode / actual code | Incomplete
-|July 15| Initial Clickable Model  | Incomplete
-|July 16| MVP | Incomplete
-|July 17| Presentations | Incomplete
+|August 27-29| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
+|August 30| Project Approval / Core Application Structure (HTML, CSS, etc.) / API Working | Incomplete
+|August 31| Pseudocode / actual code | Incomplete
+|September 1| Initial Clickable Model / MVP  | Incomplete
+|September 2| Advanced CSS / Post MVP | Incomplete
+|September 3| Presentations | Incomplete
 
 ## Priority Matrix
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
+
 
 ## Timeframes
-
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
-
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Basic HTML structure | H | 2hrs| hrs | hrs |
+| Establish CSS classes & ids | H | 3hrs| hrs | hrs |
+| Have API data working | H | 2hrs| hrs | hrs |
+| Data display all coin info needed for page | H | 3hrs| hrs | hrs |
+| Logic for coins and interaction | H | 3hrs| hrs | hrs |
+| Total | H | 6hrs| hrs | hrs |
 
 ## Code Snippet
 
