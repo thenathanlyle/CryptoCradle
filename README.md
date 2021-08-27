@@ -1,20 +1,84 @@
-# Project Overview1
-
-## Project Name
-
-The name of your project.
+# CryptoCradle
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+A cryptocurrency price chart. Create a responsive website that grabs coin prices and you can get more detail if you click on it and view coin performance. Aiming for a clean design.
 
 ## API and Data Sample
+[CoinStats Api](https://documenter.getpostman.com/view/5734027/RzZ6Hzr3?version=latest)
 
-Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
+This returns the data for all coins with the limit you set. In this example I just used the top two Bitcoin and Ethereum. This API from CoinStats returns everything from: 
+1. Coin Names 
+2. Symbols
+3. Rank 
+4. Price 
+5. Price compared to BTC 
+6. Volume
+7. Marketcap
+8. Total Supply
+
+[API Return for Code Below](https://api.coinstats.app/public/v1/coins?skip=0&limit=2&currency=USD)
+```
+{
+    "coins": [
+        {
+            "id": "bitcoin",
+            "icon": "https://static.coinstats.app/coins/Bitcoin6l39t.png",
+            "name": "Bitcoin",
+            "symbol": "BTC",
+            "rank": 1,
+            "price": 48364.86215728905,
+            "priceBtc": 1,
+            "volume": 2916089387884.5396,
+            "marketCap": 909218298424.2004,
+            "availableSupply": 18799150,
+            "totalSupply": 21000000,
+            "priceChange1h": 0.28,
+            "priceChange1d": 3.09,
+            "priceChange1w": -0.18,
+            "websiteUrl": "http://www.bitcoin.org",
+            "twitterUrl": "https://twitter.com/bitcoin",
+            "exp": [
+                "https://blockchair.com/bitcoin/",
+                "https://btc.com/",
+                "https://btc.tokenview.com/"
+            ]
+        },
+        {
+            "id": "ethereum",
+            "icon": "https://static.coinstats.app/coins/EthereumOCjgD.png",
+            "name": "Ethereum",
+            "symbol": "ETH",
+            "rank": 2,
+            "price": 3233.844395281492,
+            "priceBtc": 0.06687040591902295,
+            "volume": 1077852962962.4181,
+            "marketCap": 379268203570.13074,
+            "availableSupply": 117280906.9365,
+            "totalSupply": 0,
+            "priceChange1h": -0.1,
+            "priceChange1d": 3.96,
+            "priceChange1w": -0.01,
+            "websiteUrl": "https://www.ethereum.org/",
+            "twitterUrl": "https://twitter.com/ethereum",
+            "contractAddress": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+            "decimals": 18,
+            "exp": [
+                "https://etherscan.io/",
+                "https://ethplorer.io/",
+                "https://blockchair.com/ethereum",
+                "https://eth.tokenview.com/",
+                "https://hecoinfo.com/token/0x64ff637fb478863b7468bc97d30a5bf3a428a1fd"
+            ]
+        }
+    ]
+}
+```
 
 ## Wireframes
 
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
+Reference-style: 
+![alt text][CryptoCradleConcept.png]
 
 ### MVP/PostMVP
 
