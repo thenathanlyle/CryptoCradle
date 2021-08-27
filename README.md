@@ -77,8 +77,7 @@ This returns the data for all coins with the limit you set. In this example I ju
 
 ## Wireframes
 
-Reference-style: 
-![alt text][CryptoCradleConcept.png]
+![alt text](https://github.com/thenathanlyle/project/blob/3106c6ffa5a2b38c8edc1e0de96182f28189ca45/CryptoCradleConcept.png "CryptoCradleConcept")
 
 ### MVP/PostMVP
 
