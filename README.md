@@ -77,7 +77,7 @@ This returns the data for all coins with the limit you set. In this example I ju
 
 ## Wireframes
 
-![alt text](https://github.com/thenathanlyle/project/blob/3106c6ffa5a2b38c8edc1e0de96182f28189ca45/CryptoCradleConcept.png "CryptoCradleConcept")
+![alt text](https://github.com/thenathanlyle/CryptoCradle/blob/5655dc29ae3e99fff67487ab2851d4fa16934dbd/CrpytoCradleConcept.png "CryptoCradleConcept")
 
 ### MVP/PostMVP
 #### MVP 
@@ -92,7 +92,7 @@ This returns the data for all coins with the limit you set. In this example I ju
 ## Project Schedule
 |  Day | Deliverable | Status
 |---|---| ---|
-|August 27-29| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
+|August 27-29| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |August 30| Project Approval / Core Application Structure (HTML, CSS, etc.) / API Working | Incomplete
 |August 31| Pseudocode / actual code | Incomplete
 |September 1| Initial Clickable Model / MVP  | Incomplete
@@ -102,16 +102,17 @@ This returns the data for all coins with the limit you set. In this example I ju
 ## Priority Matrix
 
 
-
 ## Timeframes
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Basic HTML structure | H | 2hrs| hrs | hrs |
-| Establish CSS classes & ids | H | 3hrs| hrs | hrs |
-| Have API data working | H | 2hrs| hrs | hrs |
-| Data display all coin info needed for page | H | 3hrs| hrs | hrs |
-| Logic for coins and interaction | H | 3hrs| hrs | hrs |
-| Total | H | 6hrs| hrs | hrs |
+| Basic HTML structure | H | 3hrs| hrs | hrs |
+| Establish CSS classes & ids | H | 4hrs| hrs | hrs |
+| Have API data working | H | 3hrs| hrs | hrs |
+| Data display all coin info needed for page | H | 5hrs| hrs | hrs |
+| Logic for coins and interaction | H | 10hrs| hrs | hrs |
+| Responsive design across all devices | H | 2hrs| hrs | hrs |
+| Additional testing and features | H | 5hrs| hrs | hrs |
+| Total | H | 32hrs| hrs | hrs |
 
 ## Code Snippet
 
@@ -119,9 +120,10 @@ Use this section to include a brief code snippet of functionality that you are p
 
 ```
 function reverse(string) {
-	// here is the code to reverse a string of text
+  // here is the code to reverse a string of text
 }
 ```
 
 ## Change Log
  Use this section to document what changes were made and the reasoning behind those changes.  # project
+
