@@ -100,7 +100,7 @@ This returns the data for all coins with the limit you set. In this example I ju
 |September 3| Presentations | Incomplete
 
 ## Priority Matrix
-
+![alt text](https://github.com/thenathanlyle/CryptoCradle/blob/2a15cebe167edee35935012874a04e9894015a89/Priority%20Matrix.png "Priority Matrix")
 
 ## Timeframes
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
@@ -117,13 +117,4 @@ This returns the data for all coins with the limit you set. In this example I ju
 ## Code Snippet
 
 Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
-
-```
-function reverse(string) {
-  // here is the code to reverse a string of text
-}
-```
-
-## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  # project
-
+COMING SOON
