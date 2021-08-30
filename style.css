@@ -1,0 +1,16 @@
+h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3687D1;
+  margin: 0 auto;
+  font-family: 'Cabin', helvetica;
+}
+
+span{
+  color: black;
+}
+
+nav{
+  
+}
