@@ -69,15 +69,15 @@ text-align: center;
 }
 
 .coins{
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
   display: flex;
   justify-content: space-evenly;
-  font-size: 4vw;
+  font-size: 10px;
 }
 
 .coinIcon{
-  width: 15%;
-  height: 15%;
+  width: 40px;
+  height: 40px;
 }
 
 .coinRank{
