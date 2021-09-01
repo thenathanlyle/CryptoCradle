@@ -71,46 +71,73 @@ text-align: center;
 .coins{
   /* background-color: whitesmoke; */
   display: flex;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
+  justify-content: center;
   font-size: 10px;
 }
 
 .coinIcon{
   width: 40px;
   height: 40px;
+  position: absolute;
+  padding-right: 220px;
 }
 
 .coinRank{
   font-family: 'Inter';
+  position: absolute;
+  padding-right: 140px;
+  padding-top: 5px;
 }
 
 .coinName{
   font-family: 'Inter';
+  padding-left: 15px;
 }
 
 .coinSymbol{
   font-family: 'Inter';
   color: #74797D;
+  position: absolute;
+  padding-top: 20px;
+  padding-left: 15px;
 }
 
 .coinPrice{
   font-family: 'Inter';
+  position: absolute;
+  padding-left: 220px;
 }
 
 @media screen and (min-width:500px){
   h1{
-    font-size: 7vw;
+    font-size: 60px;
   }
   nav{
-    font-size: 2.5vw;
+    font-size: 25px;
   }
   .coins{
-    font-size: 1.9vw;
+    font-size: 13px;
   }
   
   .coinIcon{
-    width: 8.4%;
-    height: 8.4%;
+    width: 60px;
+    height: 60px;
+    padding-right: 400px;
+  }
+  .coinRank{
+    padding-right: 250px;
+    padding-top: 0px;
+  }
+  .coinName{
+    padding-left: 0px;
+  }
+  .coinSymbol{
+    padding-top: 26px;
+    padding-left: 0px;
+  }
+  .coinPrice{
+    padding-left: 370px;
   }
 }
 @media screen and (min-width:1200px){
@@ -120,6 +147,11 @@ text-align: center;
   nav{
     font-size: 35px;
   }
+
+  .link{
+    padding: 0vh 100px;
+  }
+
   .coins{
     font-size: 20px;
   }
@@ -127,5 +159,20 @@ text-align: center;
   .coinIcon{
     width: 80px;
     height: 80px;
+    padding-right: 600px;
+  }
+  .coinRank{
+    padding-right: 400px;
+    padding-top: 0px;
+  }
+  .coinName{
+    padding-left: 0px;
+  }
+  .coinSymbol{
+    padding-top: 40px;
+    padding-left: 0px;
+  }
+  .coinPrice{
+    padding-left: 500px;
   }
 }

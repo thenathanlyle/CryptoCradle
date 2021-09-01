@@ -2,7 +2,7 @@ const home = document.querySelector("#home")
 const allCoins = document.querySelector("#allCoins")
 const random = document.querySelector("#random")
 const search = document.querySelector("#search")
-//const coinForm = document.querySelector(".coin-form");
+//const coinForm = document.querySelector(".search-section");
 const coinList = document.querySelector(".coin-list");
 
 //Event Listener
@@ -12,7 +12,7 @@ random.addEventListener('click', randomCoins);
 //async for all coins
 async function topCoins() {
   try {
-    let res = await axios.get("https://api.coinstats.app/public/v1/coins?skip=0&limit=50&currency=USD")
+    let res = await axios.get("https://api.coinstats.app/public/v1/coins?skip=0&limit=100&currency=USD")
     //console.log(res);
     let data = res.data.coins;
     removeOldContent()
@@ -26,8 +26,10 @@ async function topCoins() {
 }
 topCoins()
 
-//async for random coin
+//async for random coin and random number generator
 async function randomCoins() {
+  const randomNumber = Math.floor(Math.random() * 501)
+  console.log(randomNumber);
   try {
     let res = await axios.get(`https://api.coinstats.app/public/v1/coins?skip=${randomNumber}&limit=1&currency=USD`)
     //console.log(res);
@@ -40,10 +42,6 @@ async function randomCoins() {
     console.log(error);
   }
 }
-
-//random number generator
-const randomNumber = Math.floor(Math.random() * 301)
-console.log(randomNumber);
 
 //remove old content
 function removeOldContent() {
