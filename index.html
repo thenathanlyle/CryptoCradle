@@ -6,21 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script defer src="app.js" charset="utf-8"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8">
     <title>cryptocradle</title>
   </head>
   <body>
-    <h1>crypto<span>cradle</span></h1>
+    <h1 id="home">crypto<span>cradle</span></h1>
     <nav>
-      <a id="home" class="link" href="#">All coins</a>
-      <a id="google" class="link" href="#">Random</a>
-      <a id="google" class="link" href="#">Search</a>
+      <a id="allCoins" class="link" href="#">All coins</a>
+      <a id="random" class="link" href="#">Random</a>
+      <a id="search" class="link" href="#">Search</a>
     </nav>
     <main>
-      <section class="coin-list"></section>
+      <div class="search-section">
+        <form id="coin-form">
+          <input type="text" id="blank" placeholder="Search Coins..">
+          <button id="searchButton">Cancel</button>
+        </form>
+      </div>
+        <div class="coin-list"></div>
     </main>
   </body>
   </html>
