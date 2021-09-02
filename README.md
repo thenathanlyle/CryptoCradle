@@ -93,10 +93,10 @@ This returns the data for all coins with the limit you set. In this example I ju
 |  Day | Deliverable | Status
 |---|---| ---|
 |August 27-29| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
-|August 30| Project Approval / Core Application Structure (HTML, CSS, etc.) / API Working | Incomplete
-|August 31| Pseudocode / actual code | Incomplete
-|September 1| Initial Clickable Model / MVP  | Incomplete
-|September 2| Advanced CSS / Post MVP | Incomplete
+|August 30| Project Approval / Core Application Structure (HTML, CSS, etc.) / API Working | Complete
+|August 31| Pseudocode / actual code | Complete
+|September 1| Initial Clickable Model / MVP  | Complete
+|September 2| Advanced CSS / Post MVP | In-Progress
 |September 3| Presentations | Incomplete
 
 ## Priority Matrix
@@ -105,16 +105,29 @@ This returns the data for all coins with the limit you set. In this example I ju
 ## Timeframes
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Basic HTML structure | H | 3hrs| hrs | hrs |
-| Establish CSS classes & ids | H | 4hrs| hrs | hrs |
-| Have API data working | H | 3hrs| hrs | hrs |
-| Data display all coin info needed for page | H | 5hrs| hrs | hrs |
-| Logic for coins and interaction | H | 10hrs| hrs | hrs |
-| Responsive design across all devices | H | 2hrs| hrs | hrs |
-| Additional testing and features | H | 5hrs| hrs | hrs |
-| Total | H | 32hrs| hrs | hrs |
+| Basic HTML structure | M | 3hrs| 2hrs | 2hrs |
+| Establish CSS classes & ids | H | 4hrs| 7hrs | 5hrs |
+| Have API data working | H | 3hrs| 11hrs | 4hrs |
+| Data display all coin info needed for page | H | 5hrs| 19hrs | 8hrs |
+| Logic for coins and interaction | H | 10hrs| 33hrs | 14hrs |
+| Responsive design across all devices | M | 2hrs| 36hrs | 3hrs |
+| Additional testing and features | L | 5hrs| 41hrs | 5hrs |
+| Total | H | 32hrs| 41hrs | 41hrs |
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
-COMING SOON
+Getting my search bar async function to work, had to have the user input value all moved to lower case and if the coin was two words replacing the "space" that the user put with a "-" for the api
+
+```async function userCoinSearch() {
+  let textInput = coinInput.value.toLowerCase().replaceAll(" ", "-");
+  //console.log(textInput)
+  try {
+    let res = await axios.get(`https://api.coinstats.app/public/v1/coins/${textInput}?currency=USD`)
+    let coin = res.data.coin;
+    removeOldContent()
+    renderInfo(coin.icon, coin.rank, coin.name.substring(0, 17), coin.symbol, coin.price.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+      , coin.priceChange1d);
+  } catch (error) {
+    console.log(error);
+  }
+}```

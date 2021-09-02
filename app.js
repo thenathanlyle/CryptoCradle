@@ -1,5 +1,5 @@
 const home = document.querySelector("#home")
-const allCoins = document.querySelector("#allCoins")
+const top100 = document.querySelector("#top100")
 const random = document.querySelector("#random")
 const search = document.querySelector("#search")
 const coinList = document.querySelector(".coin-list");
@@ -19,14 +19,15 @@ coinButton.classList.add('coinButton');
 coinButton.innerHTML = "Look up coin";
 coinForm.appendChild(coinButton)
 
+console.log(coinInput.value)
+
 function searchActivate() {
   removeOldContent()
   searchSection.appendChild(coinForm);
 }
-console.log(coinInput.value)
 
 //Event Listener
-allCoins.addEventListener('click', topCoins);
+top100.addEventListener('click', topCoins);
 random.addEventListener('click', randomCoins);
 search.addEventListener('click', searchActivate);
 coinForm.addEventListener("submit", userCoinSearch);
@@ -39,7 +40,8 @@ async function topCoins() {
     removeOldContent()
     //console.log(data);
     data.forEach((coin) => {
-      renderInfo(coin.icon, coin.rank, coin.name.substring(0, 17), coin.symbol, coin.price.toFixed(2), coin.priceChange1d);
+      renderInfo(coin.icon, coin.rank, coin.name.substring(0, 17), coin.symbol, coin.price.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+        , coin.priceChange1d);
     })
   } catch (error) {
     console.log(error);
@@ -49,14 +51,15 @@ topCoins()
 
 //async for random coin and random number generator
 async function randomCoins() {
-  const randomNumber = Math.floor(Math.random() * 501)
-  console.log(randomNumber);
+  const randomNumber = Math.floor(Math.random() * 1501)
+  //console.log(randomNumber);
   try {
     let res = await axios.get(`https://api.coinstats.app/public/v1/coins?skip=${randomNumber}&limit=1&currency=USD`)
     let data = res.data.coins;
     removeOldContent()
     data.forEach((coin) => {
-      renderInfo(coin.icon, coin.rank, coin.name.substring(0, 15), coin.symbol, coin.price.toFixed(4), coin.priceChange1d);
+      renderInfo(coin.icon, coin.rank, coin.name.substring(0, 15), coin.symbol, coin.price.toFixed(3).replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+        , coin.priceChange1d);
     })
   } catch (error) {
     console.log(error);
@@ -66,15 +69,13 @@ async function randomCoins() {
 //async for searching coin
 async function userCoinSearch() {
   let textInput = coinInput.value.toLowerCase().replaceAll(" ", "-");
-  console.log(textInput)
+  //console.log(textInput)
   try {
     let res = await axios.get(`https://api.coinstats.app/public/v1/coins/${textInput}?currency=USD`)
-    let data = res.data.coin;
+    let coin = res.data.coin;
     removeOldContent()
-    console.log(data);
-    data.forEach((coin) => {
-      renderInfo(coin.icon, coin.rank, coin.name.substring(0, 17), coin.symbol, coin.price.toFixed(2), coin.priceChange1d);
-    })
+    renderInfo(coin.icon, coin.rank, coin.name.substring(0, 17), coin.symbol, coin.price.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+      , coin.priceChange1d);
   } catch (error) {
     console.log(error);
   }
@@ -84,8 +85,8 @@ async function userCoinSearch() {
 function removeOldContent() {
   coinList.innerHTML = "";
   searchSection.innerHTML = "";
-  //coinInput.value = "";
-  //coinInput.placeholder = "Search coin name...";
+  coinInput.value = "";
+  coinInput.placeholder = "Search coin name...";
 }
 
 //Creates the data for display on html/css
